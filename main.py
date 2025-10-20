@@ -12,7 +12,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-        screen.fill(color=(255, 255, 255))
+        screen.fill(color=(0, 0, 0))
         pygame.display.flip()
 
 
