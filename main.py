@@ -8,12 +8,15 @@ def main():
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
+    wall_clock = pygame.time.Clock()
+    dtForFrame = 0
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
         screen.fill(color=(0, 0, 0))
         pygame.display.flip()
+        dtForFrame = wall_clock.tick(60)
 
 
 if __name__ == "__main__":
